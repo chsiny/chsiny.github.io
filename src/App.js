@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link } from 'react-router-dom';
 import AboutSection from "./components/AboutSection"; // About Me section as a component
 import ProjectList from "./components/ProjectList"; // Full project list page
 import ProjectDetail from "./components/ProjectDetail"; // Individual project detail page
@@ -51,7 +51,7 @@ function App() {
                         description={project.description}
                         skills={project.skills}
                         image={project.image}
-                        link={`/projects/${project.id}`} // Link to individual project page
+                        link={`#/projects/${project.id}`}
                       />
                     ))}
                   </div>

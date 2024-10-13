@@ -14,7 +14,7 @@ const ProjectList = () => {
             description={project.description}
             skills={project.skills}
             image={project.image}
-            link={`/projects/${project.id}`} // Link to individual project page
+            link={`#/projects/${project.id}`} // Link to individual project page
           />
         ))}
       </div>
