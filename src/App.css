@@ -17,6 +17,47 @@ body {
   overflow-x: hidden;
 }
 
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Minimum height is 100% of the viewport */
+}
+
+/* The content of the app should grow to take up space */
+.main-content {
+  flex: 1; /* This ensures the main content grows to fill available space */
+}
+
+a {
+  color: #fff;
+}
+
+.navbar {
+  width: 100%; /* Full width of the screen */
+  display: flex;
+  justify-content: center; /* Center the items horizontally */
+  padding: 20px 0; /* Add some padding for spacing */
+}
+
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li {
+  display: inline;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white; /* Adjust the color as per your design */
+}
+
+.navbar ul li a:hover {
+  text-decoration: underline; /* Add hover effect */
+}
+
 .landing-section {
   display: flex;
   flex-direction: column;
@@ -38,7 +79,7 @@ body {
   background-clip: text !important; /* Clip the background to the text */
   -webkit-background-clip: text !important; /* Webkit-specific background clip */
   color: transparent; /* Make the text itself transparent */
-  animation: draw-text 3s ease-in forwards; /* Apply the draw-text animation over 4 seconds */
+  animation: draw-text 2s ease-in forwards; /* Apply the draw-text animation over 4 seconds */
   background-size: 300%; /* Large enough background to allow smooth transition */
   background-position: 100%; /* Start with the background fully covering the light */
   margin: 30px;

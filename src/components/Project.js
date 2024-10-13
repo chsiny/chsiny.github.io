@@ -7,10 +7,10 @@ const Project = ({ name, description, skills, image, link }) => {
       <img src={image} alt={`${name} screenshot`} className="project-image" />
       <div className="project-details">
         <h3>
-          <a href={link} target="_blank" rel="noopener noreferrer">{name}</a>
+          <a href={link}>{name}</a>
         </h3>
         <p>{description}</p>
-        <p className="skills-used"> {skills}</p>
+        <p className="skills-used"><strong>Tech Stack: </strong>{skills}</p>
       </div>
     </div>
   );

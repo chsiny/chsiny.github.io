@@ -1,66 +1,71 @@
 /* Project.css */
 .project-card {
-    display: grid;
-    grid-template-columns: 200px 1fr; /* Image occupies a fixed width, content takes up the remaining space */
-    gap: 20px; /* Space between image and text */
-    padding: 20px;
-    background-color: #222;
-    border-radius: 8px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-    margin-bottom: 20px;
-    align-items: center; /* Vertically center the content */
+  display: grid;
+  grid-template-columns: 200px 1fr; /* Image occupies a fixed width, content takes up the remaining space */
+  gap: 20px; /* Space between image and text */
+  padding: 20px;
+  background-color: #222;
+  border-radius: 8px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+  align-items: center; /* Vertically center the content */
+  height: 150px;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  max-width: 150px; /* Set max width for the image */
+}
+
+.project-details {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.project-details h3 {
+  margin: 0 0 10px 0; /* Space between name and description */
+  font-size: 1.2rem;
+  color: white;
+}
+
+.project-details p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.project-details a {
+  color: #1e90ff;
+}
+
+.skills-used {
+  margin-top: 10px;
+  color: #1e90ff; /* Highlight the skills */
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    grid-template-columns: 1fr; /* Stacks image on top of text */
+    text-align: center;
   }
-  
+
   .project-image {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    max-width: 150px; /* Set max width for the image */
+    max-width: 100%; /* Full width on smaller screens */
+    margin-bottom: 20px; /* Add space between image and text */
   }
-  
-  .project-details {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-  }
-  
-  .project-details h3 {
-    margin: 0 0 10px 0; /* Space between name and description */
-    font-size: 1.2rem;
-    color: white;
-  }
-  
-  .project-details p {
-    margin: 5px 0;
-    font-size: 0.9rem;
-    color: #ccc;
-  }
+}
 
-  .project-details a {
-    color: #1e90ff;
-  }
-  
-  .skills-used {
-    margin-top: 10px;
-    color: #1e90ff; /* Highlight the skills */
-  }
-
-  .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.7);
-    transition: all 0.3s ease;
-  }
-
-  @media (max-width: 768px) {
-    .project-card {
-      grid-template-columns: 1fr; /* Stacks image on top of text */
-      text-align: center;
-    }
-  
-    .project-image {
-      max-width: 100%; /* Full width on smaller screens */
-      margin-bottom: 20px; /* Add space between image and text */
-    }
-  }
+.view-all {
+    margin: 40px 0;
+}

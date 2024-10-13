@@ -1,0 +1,30 @@
+/* Footer.css */
+.footer {
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.footer .social-icons {
+  margin-bottom: 20px;
+}
+
+.footer .social-icons a {
+  margin: 0 10px;
+  color: white;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  color: #aaa; /* Lighter hover effect */
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}

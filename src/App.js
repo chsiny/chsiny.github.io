@@ -1,98 +1,78 @@
 import React, { useState } from "react";
-import Project from "./components/Project";
-import projectsData from './data/projects.json';
-import Modal from "./components/Modal";
+import { Routes, Route, Link } from "react-router-dom";
+import AboutSection from "./components/AboutSection"; // About Me section as a component
+import ProjectList from "./components/ProjectList"; // Full project list page
+import ProjectDetail from "./components/ProjectDetail"; // Individual project detail page
+import Modal from "./components/Modal"; // Modal for About Me
+import projectsData from "./data/projects.json"; // Your project data
+import Project from "./components/Project"; // Project component for displaying each project
+import Footer from "./components/Footer";
 import "./App.css";
-import { Routes, Route, Link } from 'react-router-dom';
-import ProjectDetail from './components/ProjectDetail';
-import ProjectList from './components/ProjectList'; // New component for the full project list
 
 function App() {
   const [showModal, setShowModal] = useState(false);
+  const firstFiveProjects = projectsData.slice(0, 5); // Extract the top 5 projects
 
   const openModal = () => setShowModal(true);
   const closeModal = () => setShowModal(false);
 
-  // Scroll to next section
-  const scrollToNextSection = () => {
-    window.scrollTo({
-      top: window.innerHeight, // Scroll down one viewport height
-      behavior: "smooth", // Smooth scrolling
-    });
-  };
-
-  const firstFiveProjects = projectsData.slice(0, 5);
-
   return (
     <div className="App">
-      <Routes>
-        {/* Home Route */}
-        <Route
-          path="/"
-          element={
-            <>
-              {/* About Me Section */}
-              <header className="landing-section">
-                <h1 className="animate-text">Hi, I'm Jerry Chen</h1>
-                <button className="about-button" onClick={openModal}>
-                  About Me
-                </button>
-                <div className="social-icons">
-                  <a
-                    href="https://github.com/your-github"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className="fab fa-github"></i>
-                  </a>
-                  <a
-                    href="https://linkedin.com/in/your-linkedin"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className="fab fa-linkedin"></i>
-                  </a>
-                </div>
-                <div className="scroll-down" onClick={scrollToNextSection}>
-                  <span className="double-arrows">
-                    <i className="fas fa-chevron-down"></i>
-                    <i className="fas fa-chevron-down"></i>
-                  </span>
-                </div>
-              </header>
+      {/* Navbar */}
+      <nav className="navbar">
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/projects">Projects</Link>
+          </li>
+        </ul>
+      </nav>
 
-              {/* Modal Component */}
-              <Modal show={showModal} handleClose={closeModal} />
+      <div className="main-content">
+        <Routes>
+          {/* Home (Landing Page) */}
+          <Route
+            path="/"
+            element={
+              <>
+                <AboutSection openModal={openModal} />
+                <Modal show={showModal} handleClose={closeModal} />
 
-              {/* Project Section */}
-              <section className="projects-section">
-                <h2>Projects</h2>
-                <div className="project-list">
-                  {firstFiveProjects.map((project, index) => (
-                    <Project
-                      key={index}
-                      name={project.name}
-                      description={project.description}
-                      skills={project.skills}
-                      image={project.image}
-                      link={`/projects/${project.id}`} // Link to individual project page
-                    />
-                  ))}
-                </div>
-                <div className="view-all">
-                  <Link to="/projects">View All Projects</Link> {/* Link to all projects page */}
-                </div>
-              </section>
-            </>
-          }
-        />
+                {/* Top 5 Projects Section */}
+                <section className="projects-section">
+                  <h2>Recent Projects</h2>
+                  <div className="project-list">
+                    {firstFiveProjects.map((project, index) => (
+                      <Project
+                        key={index}
+                        name={project.name}
+                        description={project.description}
+                        skills={project.skills}
+                        image={project.image}
+                        link={`/projects/${project.id}`} // Link to individual project page
+                      />
+                    ))}
+                  </div>
+                  {/* View All Projects link */}
+                  <div className="view-all">
+                    <Link to="/projects">View More</Link>
+                  </div>
+                </section>
+              </>
+            }
+          />
 
-        {/* Project Detail Route */}
-        <Route path="/projects/:id" element={<ProjectDetail />} />
+          {/* Full Project List Page */}
+          <Route path="/projects" element={<ProjectList />} />
 
-        {/* Project List Route */}
-        <Route path="/projects" element={<ProjectList />} /> {/* New route for full projects page */}
-      </Routes>
+          {/* Individual Project Detail Page */}
+          <Route path="/projects/:id" element={<ProjectDetail />} />
+        </Routes>
+      </div>
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

@@ -1,0 +1,84 @@
+/* ProjectDetail.css */
+.project-detail {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: left;
+}
+
+.project-detail h1 {
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+}
+
+.project-detail > p {
+    margin-bottom: 20px;
+}
+
+.image-gallery {
+  margin-top: 50px;
+}
+
+.images-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.project-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.detailed-description {
+  margin-top: 40px;
+}
+
+.comments-section {
+  margin-top: 40px;
+}
+
+/* Style the thumbnail images */
+.thumbnail {
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+  margin: 5px;
+  cursor: pointer;
+}
+
+/* Modal styles */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+}
+
+.modal-img {
+  position: relative;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.full-size-image {
+  max-width: 100%;
+  max-height: 80vh;
+}
+
+/* Close button style */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}

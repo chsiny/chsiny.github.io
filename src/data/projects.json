@@ -1,18 +1,33 @@
 [
   {
-    "id": "1",
-    "name": "Porfolio",
-    "description": "My Portfolio",
-    "skills": "React.js",
-    "image": "path/to/project1.jpg",
-    "link": "https://github.com"
+    "id": "3",
+    "name": "MBQ Questionnaire @ UQ",
+    "description": "A web-base questionnaire for parent to assess their children's behaviours",
+    "skills": "Node.js, Express.js, Git",
+    "image": "/img/mbq-home.png",
+    "images": [
+      "/img/mbq-home.png",
+      "/img/mbq-result.png",
+      "/img/mbq-guidelines.png",
+      "/img/mbq-index.png",
+      "/img/mbq-graph.png"
+    ],
+    "detailedDescription": "",
+    "repo": "project-1-repo"
   },
   {
     "id": "2",
-    "name": "Project Name 2",
-    "description": "This is a brief description of Project 2.",
-    "skills": "React, Node.js, MongoDB",
-    "image": "path/to/project2.jpg",
-    "link": "https://github.com"
+    "name": "AI @ Desygner",
+    "description": "Integrate OpenAI's functino calling feature into Desygner platform",
+    "skills": "Python, OpenAI, Llama Index, RAG, Redis",
+    "image": "/img/desygner-chat1.png",
+    "images": [
+      "/img/desygner-chat1.png",
+      "/img/desygner-chat2.png",
+      "/img/desygner-chat3.png",
+      "/img/desygner-result.png"
+    ],
+    "detailedDescription": "",
+    "repo": "project-2-repo"
   }
 ]
