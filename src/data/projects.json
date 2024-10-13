@@ -1,5 +1,6 @@
 [
   {
+    "id": "1",
     "name": "Porfolio",
     "description": "My Portfolio",
     "skills": "React.js",
@@ -7,6 +8,7 @@
     "link": "https://github.com"
   },
   {
+    "id": "2",
     "name": "Project Name 2",
     "description": "This is a brief description of Project 2.",
     "skills": "React, Node.js, MongoDB",
