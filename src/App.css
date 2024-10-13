@@ -1,38 +1,180 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* General Styles */
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
   text-align: center;
+  padding: 5%, 20%;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.landing-section {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  text-align: center;
+  margin: 200px;
+  height: 450px;
+}
+
+/* Text Animation - Gradual Light-Up */
+.animate-text {
+  font-size: 2.5rem;
+  background: linear-gradient(
+    90deg,
+    #fff 0%,
+    #000 100%
+  ); /* Start white, end black */
+  background-clip: text !important; /* Clip the background to the text */
+  -webkit-background-clip: text !important; /* Webkit-specific background clip */
+  color: transparent; /* Make the text itself transparent */
+  animation: draw-text 3s ease-in forwards; /* Apply the draw-text animation over 4 seconds */
+  background-size: 300%; /* Large enough background to allow smooth transition */
+  background-position: 100%; /* Start with the background fully covering the light */
+  margin: 30px;
+}
+
+/* Keyframe to move background gradient from right to left */
+@keyframes draw-text {
+  0% {
+    background-position: 100%; /* Start with dark (black) */
+  }
+  100% {
+    background-position: 0%; /* Move to fully light (white) */
+  }
+}
+
+/* About Button */
+.about-button {
+  background-color: #f0f0f0;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin: 50px 0;
+}
+
+.social-icons a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 1.5rem;
+}
+
+/* Scroll Down Button */
+.scroll-down {
+  margin-top: 100px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.double-arrows i {
+  font-size: 1.5rem;
   color: white;
+  display: block;
+  margin-top: -10px; /* Reduced margin to bring arrows closer */
+  animation: slideIn 1s infinite alternate;
 }
 
-.App-link {
-  color: #61dafb;
+.double-arrows i:first-child {
+  animation-delay: 0s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.double-arrows i:last-child {
+  animation-delay: 0.5s; /* Delay for the second arrow */
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px); /* Reduced the vertical movement */
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
+/* Project Section */
+.projects-section {
+  padding: 50px;
+  /* background-color: #111; */
+  color: #fff;
+  text-align: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+}
+
+.projects-section h2 {
+  font-size: 2rem;
+  margin-bottom: 50px;
+  color: #fff;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive columns */
+  gap: 20px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-item {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
+}
+
+.project-item:hover {
+  transform: translateY(-10px); /* Lift the card slightly when hovered */
+}
+
+.project-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.project-item p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.project-item a {
+  color: #1e90ff;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 10px;
+  transition: color 0.3s;
+}
+
+.project-item a:hover {
+  color: #ff4500;
+}
+
+.project-thumbnail {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 15px;
 }

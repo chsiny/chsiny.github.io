@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Porfolio",
+    "description": "My Portfolio",
+    "skills": "React.js",
+    "image": "path/to/project1.jpg",
+    "link": "https://github.com"
+  },
+  {
+    "name": "Project Name 2",
+    "description": "This is a brief description of Project 2.",
+    "skills": "React, Node.js, MongoDB",
+    "image": "path/to/project2.jpg",
+    "link": "https://github.com"
+  }
+]
