@@ -87,5 +87,7 @@
 }
 
 @media only screen and (min-width: 700px) {
-
+  .images-container {
+    justify-content: start;
+  }
 }
