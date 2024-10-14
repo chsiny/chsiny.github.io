@@ -18,7 +18,7 @@
   {
     "id": "2",
     "name": "AI @ Desygner",
-    "description": "Integrate OpenAI's functino calling feature into Desygner platform",
+    "description": "Integrate OpenAI's function calling feature into Desygner platform",
     "skills": "Python, OpenAI, Llama Index, RAG, Redis",
     "image": "/img/desygner-chat1.png",
     "images": [

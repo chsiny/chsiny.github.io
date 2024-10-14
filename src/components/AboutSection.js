@@ -11,6 +11,7 @@ const AboutSection = ({ openModal }) => {
   return (
     <header className="landing-section">
       <h1 className="animate-text">Hi, I'm Jerry Chen</h1>
+      <h3 className="animate-text">Software Engineer | AI & ML | Cloud Computing</h3>
       <button className="about-button" onClick={openModal}>
         About Me
       </button>

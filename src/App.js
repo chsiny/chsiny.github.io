@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link } from "react-router-dom";
 import AboutSection from "./components/AboutSection"; // About Me section as a component
 import ProjectList from "./components/ProjectList"; // Full project list page
 import ProjectDetail from "./components/ProjectDetail"; // Individual project detail page
@@ -8,6 +8,8 @@ import projectsData from "./data/projects.json"; // Your project data
 import Project from "./components/Project"; // Project component for displaying each project
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import StarsBackground from "./components/StarsBackground";
+import FadeInSection from "./components/FadeInSection";
 import "./App.css";
 
 function App() {
@@ -31,7 +33,6 @@ function App() {
           </li>
         </ul>
       </nav>
-
       <div className="main-content">
         <Routes>
           {/* Home (Landing Page) */}
@@ -39,28 +40,33 @@ function App() {
             path="/"
             element={
               <>
-                <AboutSection openModal={openModal} />
+                <StarsBackground />
+                <FadeInSection>
+                  <AboutSection openModal={openModal} />
+                </FadeInSection>
                 <Modal show={showModal} handleClose={closeModal} />
 
                 {/* Top 5 Projects Section */}
                 <section className="projects-section">
-                  <h2>Recent Projects</h2>
-                  <div className="project-list">
-                    {firstFiveProjects.map((project, index) => (
-                      <Project
-                        key={index}
-                        name={project.name}
-                        description={project.description}
-                        skills={project.skills}
-                        image={project.image}
-                        link={`#/projects/${project.id}`}
-                      />
-                    ))}
-                  </div>
-                  {/* View All Projects link */}
-                  <div className="view-all">
-                    <Link to="/projects">View More</Link>
-                  </div>
+                  <FadeInSection>
+                    <h2>Recent Projects</h2>
+                    <div className="project-list">
+                      {firstFiveProjects.map((project, index) => (
+                        <Project
+                          key={index}
+                          name={project.name}
+                          description={project.description}
+                          skills={project.skills}
+                          image={project.image}
+                          link={`#/projects/${project.id}`}
+                        />
+                      ))}
+                    </div>
+                    {/* View All Projects link */}
+                    <div className="view-all">
+                      <Link to="/projects">View More</Link>
+                    </div>
+                  </FadeInSection>
                 </section>
               </>
             }

@@ -19,12 +19,16 @@ body {
 .App {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Minimum height is 100% of the viewport */
+  min-height: 100vh;
 }
 
 /* The content of the app should grow to take up space */
 .main-content {
   flex: 1; /* This ensures the main content grows to fill available space */
+}
+
+h1 {
+  font-size: 2.5rem;
 }
 
 a {
@@ -34,8 +38,11 @@ a {
 .navbar {
   width: 100%; /* Full width of the screen */
   display: flex;
+  z-index: 1;
   justify-content: center; /* Center the items horizontally */
   padding: 20px 0; /* Add some padding for spacing */
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .navbar ul {
@@ -63,17 +70,16 @@ a {
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 600px;
+  height: 100vh;
 }
 
 /* Text Animation - Gradual Light-Up */
 .animate-text {
-  font-size: 2rem;
   background: linear-gradient(
     90deg,
     #fff 0%,
     #000 100%
-  ); /* Start white, end black */
+  );
   background-clip: text !important; /* Clip the background to the text */
   -webkit-background-clip: text !important; /* Webkit-specific background clip */
   color: transparent; /* Make the text itself transparent */
@@ -81,6 +87,10 @@ a {
   background-size: 300%; /* Large enough background to allow smooth transition */
   background-position: 100%; /* Start with the background fully covering the light */
   margin: 30px;
+}
+
+h1.animate-text {
+  margin-top: 130px;
 }
 
 /* Keyframe to move background gradient from right to left */
@@ -140,20 +150,32 @@ a {
   }
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1.5s ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Project Section */
 .projects-section {
-  padding: 50px;
+  background-color: #222;
+  padding: 50px 5%;
   color: #fff;
   text-align: center;
   margin: auto;
   display: flex;
   flex-direction: column;
-  max-width: 800px;
+  max-width: 100%;
 }
 
 .projects-section h2 {
   font-size: 2rem;
-  margin-bottom: 50px;
+  margin: 40px;
   color: #fff;
 }
 
@@ -172,13 +194,21 @@ a {
 /* Tablet Size Overrides */
 @media only screen and (min-width: 700px) {
   .animate-text {
-    font-size: 2.5rem;
+    /* font-size: 2.5rem; */
     margin: 30px;
   }
 
   .landing-section {
-    margin: 200px;
-    height: 450px;
+    height: 100vh;
+  }
+
+  .projects-section {
+    padding: 50px 15%;
   }
 }
 
+@media only screen and (min-width: 1200px) {
+  .projects-section {
+    padding: 50px 22%;
+  }
+}

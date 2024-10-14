@@ -15,13 +15,28 @@ const Modal = ({ show, handleClose }) => {
   return (
     <div className={showHideClassName} onClick={handleBackgroundClick}>
       <div className="modal-content">
+        <iframe
+          title="hi"
+          src="https://giphy.com/embed/7Zl86oBr2SH2dTsViU"
+          width="200"
+          height="200"
+          frameBorder="0"
+          className="giphy-embed"
+          allowFullScreen
+        ></iframe>
         <span className="close" onClick={handleClose}>
           &times;
         </span>
-        <p>
-          Here’s more about me... I’m a software developer specializing in
-          building awesome web applications.
-        </p>
+        <div className="intro-text">
+          <p>
+            Here’s more about me... <br></br><br></br>
+            🏀 Basketball Enthusiast<br></br>
+            🍜 Foodie at Heart<br></br>
+            🌿 Nature lover<br></br>
+            💡 Quick Learner<br></br>
+            🏆 Team Player<br></br>
+          </p>
+        </div>
       </div>
     </div>
   );
