@@ -12,7 +12,7 @@
 }
 
 .project-detail > p {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .image-gallery {
@@ -75,10 +75,12 @@
 }
 
 /* Close button style */
-.close {
+.modal-img > .close {
+  color: black;
   position: absolute;
   top: 10px;
   right: 10px;
   font-size: 24px;
   cursor: pointer;
+  margin: 0 5px;
 }
