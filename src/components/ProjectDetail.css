@@ -2,7 +2,7 @@
 .project-detail {
   max-width: 800px;
   margin: 50px auto;
-  padding: 20px;
+  padding: 20px 40px;
   text-align: left;
 }
 
@@ -21,6 +21,7 @@
 
 .images-container {
   display: flex;
+  justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
 }
@@ -83,4 +84,8 @@
   font-size: 24px;
   cursor: pointer;
   margin: 0 5px;
+}
+
+@media only screen and (min-width: 700px) {
+
 }

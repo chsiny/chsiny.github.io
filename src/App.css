@@ -13,7 +13,6 @@ body {
   color: #fff;
   font-family: Arial, sans-serif;
   text-align: center;
-  padding: 5%, 20%;
   overflow-x: hidden;
 }
 
@@ -64,13 +63,12 @@ a {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 200px;
-  height: 450px;
+  height: 600px;
 }
 
 /* Text Animation - Gradual Light-Up */
 .animate-text {
-  font-size: 2.5rem;
+  font-size: 2rem;
   background: linear-gradient(
     90deg,
     #fff 0%,
@@ -103,12 +101,6 @@ a {
   border: none;
   cursor: pointer;
   margin: 50px 0;
-}
-
-.social-icons a {
-  color: #fff;
-  margin: 0 10px;
-  font-size: 1.5rem;
 }
 
 /* Scroll Down Button */
@@ -151,7 +143,6 @@ a {
 /* Project Section */
 .projects-section {
   padding: 50px;
-  /* background-color: #111; */
   color: #fff;
   text-align: center;
   margin: auto;
@@ -171,51 +162,23 @@ a {
   grid-template-columns: repeat(
     auto-fit,
     minmax(300px, 1fr)
-  ); /* Responsive columns */
+  );
   gap: 20px;
   padding: 0;
   display: flex;
   flex-direction: column;
 }
 
-.project-item {
-  background-color: #222;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s;
+/* Tablet Size Overrides */
+@media only screen and (min-width: 700px) {
+  .animate-text {
+    font-size: 2.5rem;
+    margin: 30px;
+  }
+
+  .landing-section {
+    margin: 200px;
+    height: 450px;
+  }
 }
 
-.project-item:hover {
-  transform: translateY(-10px); /* Lift the card slightly when hovered */
-}
-
-.project-item h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #fff;
-}
-
-.project-item p {
-  font-size: 1rem;
-  color: #ccc;
-}
-
-.project-item a {
-  color: #1e90ff;
-  text-decoration: none;
-  font-weight: bold;
-  margin-right: 10px;
-  transition: color 0.3s;
-}
-
-.project-item a:hover {
-  color: #ff4500;
-}
-
-.project-thumbnail {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  margin-bottom: 15px;
-}
