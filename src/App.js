@@ -7,6 +7,7 @@ import Modal from "./components/Modal"; // Modal for About Me
 import projectsData from "./data/projects.json"; // Your project data
 import Project from "./components/Project"; // Project component for displaying each project
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 import "./App.css";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
 
   return (
     <div className="App">
+      <ScrollToTop /> {/* Scroll restoration */}
       {/* Navbar */}
       <nav className="navbar">
         <ul>
