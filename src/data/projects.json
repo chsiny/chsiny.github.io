@@ -13,11 +13,11 @@
       "/img/mbq-graph.png"
     ],
     "detailedDescription": "",
-    "repo": "project-1-repo"
+    "repo": ""
   },
   {
     "id": "2",
-    "name": "AI @ Desygner",
+    "name": "AI Assistant @ Desygner",
     "description": "Integrate OpenAI's function calling feature into Desygner platform",
     "skills": "Python, OpenAI, Llama Index, RAG, Redis",
     "image": "/img/desygner-chat1.png",
@@ -27,16 +27,30 @@
       "/img/desygner-chat3.png",
       "/img/desygner-result.png"
     ],
-    "detailedDescription": "",
+    "detailedDescription": [
+      {
+        "type": "title",
+        "content": "Overview"
+      },
+      {
+        "type": "paragraph",
+        "content": "Integrated AI functionality into the platform ecosystem by leveraging OpenAI’s function calling feature, Llama Index, and proprietary APIs. Enabled users to chat with AI agent to perform actions such as creating design templates and elements."
+      }
+    ],
     "repo": ""
   },
   {
     "id": "1",
     "name": "AQademy",
     "description": "An online discussion forum",
-    "skills": "PHP, AJAX, jQuery Bootstrap, MySQL, MongoDB, MVC, Docker, GCP",
+    "skills": "PHP, AJAX, jQuery Bootstrap, MySQL, MongoDB, MVC, Docker, Kubernetes, GCP",
     "image": "/img/aqademy.png",
-    "images": ["/img/aqademy-uiux.png", "/img/aqademy-login.png"],
+    "images": [
+      "/img/aqademy-uiux.png",
+      "/img/aqademy-login.png",
+      "/img/aqademy-search.png",
+      "/img/aqademy-k8s.JPG"
+    ],
     "detailedDescription": [
       {
         "type": "title",
@@ -103,6 +117,6 @@
         "content": "Deployed on Google Cloud Platform using Docker, Docker Compose, and Docker Swarm. It was containerised and scalable, featuring high availability, self-healing capability, and automated rollouts/rollbacks."
       }
     ],
-    "repo": "project-2-repo"
+    "repo": ""
   }
 ]

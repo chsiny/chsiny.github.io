@@ -135,7 +135,7 @@ const ProjectDetail = () => {
             return null;
           })
         ) : (
-          <p>To be continued</p>
+          <p><i>Description coming soon. Stay tuned for updates!</i></p>
         )}
       </section>
     </div>

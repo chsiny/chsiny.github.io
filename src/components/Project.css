@@ -30,6 +30,7 @@
 }
 
 .project-details p {
+  line-height: 1.5;
   margin: 5px 0;
   font-size: 0.9rem;
   color: #ccc;
