@@ -1,17 +1,20 @@
-import React from 'react';
+import React from "react";
 
 const AboutSection = ({ openModal }) => {
   const scrollToNextSection = () => {
     window.scrollTo({
       top: window.innerHeight,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
 
   return (
     <header className="landing-section">
       <h1 className="animate-text">Hi, I'm Jerry Chen</h1>
-      <h3 className="animate-text">Software Engineer | AI & ML | Cloud Computing</h3>
+      <h3 className="animate-text">
+        <span className="highlight">Software Engineer</span> with a passion for
+        AI and Cloud Technology
+      </h3>
       <button className="about-button" onClick={openModal}>
         About Me
       </button>
