@@ -1,6 +1,6 @@
 [
   {
-    "id": "1",
+    "id": "3",
     "name": "MBQ Questionnaire @ UQ",
     "description": "A web-base questionnaire for parent to assess their children's behaviours",
     "skills": "Node.js, Express.js, Git",
@@ -28,6 +28,81 @@
       "/img/desygner-result.png"
     ],
     "detailedDescription": "",
+    "repo": ""
+  },
+  {
+    "id": "1",
+    "name": "AQademy",
+    "description": "An online discussion forum",
+    "skills": "PHP, AJAX, jQuery Bootstrap, MySQL, MongoDB, MVC, Docker, GCP",
+    "image": "/img/aqademy.png",
+    "images": ["/img/aqademy-uiux.png", "/img/aqademy-login.png"],
+    "detailedDescription": [
+      {
+        "type": "title",
+        "content": "Introduction"
+      },
+      {
+        "type": "paragraph",
+        "content": "AQademy is an online discussion platform that empowers students to ask questions and participate in forum-based discussions. Instructors can moderate discussions and endorse accurate answers, and students can upvote the answers they find helpful. This platform aims to enhance student engagement and promote active learning, revolutionizing the way students interact with their coursework."
+      },
+      {
+        "type": "title",
+        "content": "Features"
+      },
+      {
+        "type": "paragraph",
+        "content": "This web-based application project implemented the MVC design pattern and deployed on the UQCloud. It was designed with a variety of features that aim to enhance the user experience. Users can post questions anonymously or with their names, and only the teaching team has the authority to make them private and viewable. Additionally, our platform allows users to like, comment, and post questions, and upvote answers."
+      },
+      {
+        "type": "paragraph",
+        "content": "Each course has its discussion forum, students can enroll in courses to post questions and answer questions. Users can search for relevant posts by using keywords or filters such as most upvoted, most recent, most comments, etc. Moreover, they can also comment on a post, or bookmark a post to receive notifications about updates."
+      },
+      {
+        "type": "paragraph",
+        "content": "This project utilised HTML, CSS, JavaScript, jQuery, Bootstrap, and AJAX to develop a responsive frontend interface with an intuitive user experience. The backend was developed by using PHP, CodeIgniter, and MySQL to process requests, communicate with the database, and generate dynamic content on the client side."
+      },
+      {
+        "type": "title",
+        "content": "Functionalities"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Login",
+          "Registration",
+          "User profile",
+          "Cookies",
+          "Search box autocompletion",
+          "Bookmarking",
+          "Google reCAPTCHA",
+          "Writing comments",
+          "Password hashcode",
+          "Adding posts",
+          "Rating",
+          "User profile updating",
+          "Basic file uploading",
+          "Authorization",
+          "Drag and drop for file uploading",
+          "Multiple file uploads simultaneously",
+          "SQL Injection protection",
+          "Email verification",
+          "Retain user login details after session expiry",
+          "Maintain scroll position when go back",
+          "Continuous data loading while scrolling",
+          "Item searching",
+          "Forget password functionality"
+        ]
+      },
+      {
+        "type": "title",
+        "content": "Further Development"
+      },
+      {
+        "type": "paragraph",
+        "content": "Deployed on Google Cloud Platform using Docker, Docker Compose, and Docker Swarm. It was containerised and scalable, featuring high availability, self-healing capability, and automated rollouts/rollbacks."
+      }
+    ],
     "repo": "project-2-repo"
   }
 ]

@@ -61,10 +61,9 @@
   .project-card {
     display: grid;
     grid-template-columns: 200px 1fr; /* Image occupies a fixed width, content takes up the remaining space */
-    gap: 20px; /* Space between image and text */
+    gap: 20px;
     align-items: flex-start;
     height: 150px;
-    /* text-align: center; */
   }
 
   .project-details {

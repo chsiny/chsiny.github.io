@@ -37,6 +37,7 @@ a {
 
 .highlight {
   background: linear-gradient(to right, #f89100, #f7b910); /* Gradient from left to right */
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; /* Fill the text with transparent to show the gradient */
   font-weight: bold; /* Optional: make it bold to stand out more */
@@ -88,7 +89,7 @@ a {
     #000 100%
   );
   background-clip: text !important; /* Clip the background to the text */
-  -webkit-background-clip: text !important; /* Webkit-specific background clip */
+  -webkit-background-clip: text;
   color: transparent; /* Make the text itself transparent */
   animation: draw-text 2s ease-in forwards; /* Apply the draw-text animation over 4 seconds */
   background-size: 300%; /* Large enough background to allow smooth transition */

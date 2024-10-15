@@ -113,9 +113,30 @@ const ProjectDetail = () => {
           </div>
         </div>
       )}
+
       {/* Detailed Description Section */}
       <section className="detailed-description">
-        <p>{project.detailedDescription || "To be continued"}</p>
+        {project.detailedDescription &&
+        project.detailedDescription.length > 0 ? (
+          project.detailedDescription.map((section, index) => {
+            if (section.type === "title") {
+              return <h3 className="detail-title" key={index}>{section.content}</h3>;
+            } else if (section.type === "paragraph") {
+              return <p className="detail-text" key={index}>{section.content}</p>;
+            } else if (section.type === "list") {
+              return (
+                <ul className="detail-list" key={index}>
+                  {section.items.map((item, idx) => (
+                    <li key={idx}>{item}</li>
+                  ))}
+                </ul>
+              );
+            }
+            return null;
+          })
+        ) : (
+          <p>To be continued</p>
+        )}
       </section>
     </div>
   );
