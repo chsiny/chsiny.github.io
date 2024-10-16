@@ -1,6 +1,6 @@
 [
   {
-    "id": "3",
+    "id": "13",
     "name": "MBQ Questionnaire @ UQ",
     "description": "A web-base questionnaire for parent to assess their children's behaviours",
     "skills": "Node.js, Express.js, Git",
@@ -12,11 +12,12 @@
       "/img/mbq-index.png",
       "/img/mbq-graph.png"
     ],
-    "detailedDescription": "",
-    "repo": ""
+    "detailedDescription": [
+
+    ]
   },
   {
-    "id": "2",
+    "id": "12",
     "name": "AI Assistant @ Desygner",
     "description": "Integrate OpenAI's function calling feature into Desygner platform",
     "skills": "Python, OpenAI, Llama Index, RAG, Redis",
@@ -36,11 +37,10 @@
         "type": "paragraph",
         "content": "Integrated AI functionality into the platform ecosystem by leveraging OpenAI’s function calling feature, Llama Index, and proprietary APIs. Enabled users to chat with AI agent to perform actions such as creating design templates and elements."
       }
-    ],
-    "repo": ""
+    ]
   },
   {
-    "id": "1",
+    "id": "11",
     "name": "AQademy",
     "description": "An online discussion forum",
     "skills": "PHP, AJAX, jQuery Bootstrap, MySQL, MongoDB, MVC, Docker, Kubernetes, GCP",
@@ -116,7 +116,121 @@
         "type": "paragraph",
         "content": "Deployed on Google Cloud Platform using Docker, Docker Compose, and Docker Swarm. It was containerised and scalable, featuring high availability, self-healing capability, and automated rollouts/rollbacks."
       }
+    ]
+  },
+  {
+    "id": "6",
+    "name": "AI Play Game with Uncertainty",
+    "description": "Coming soon, stay tuned!",
+    "skills": "Python, Reinforcement Learning",
+    "image": "/img/lunarlander.gif",
+    "images": [
+
     ],
-    "repo": ""
+    "detailedDescription": [
+
+    ]
+  },
+  {
+    "id": "5",
+    "name": "AI Plays DRAGONGAME - Search in Maze",
+    "description": "Coming soon, stay tuned!",
+    "skills": "Python, Data Structures, Algorithms, A* Search, Value Iteration, Policy Iteration",
+    "image": "/img/ai-dragon.png",
+    "images": [
+
+    ],
+    "detailedDescription": [
+
+    ]
+  },
+  {
+    "id": "4",
+    "name": "DSA Implementation",
+    "description": "I implemented various data structures from scratch, ranging from fundamental to advanced. I then applied these data structures along with algorithms to solve challenging problems.",
+    "skills": "Python, Data Structures, Algorithms",
+    "image": "/img/quicksort.gif",
+    "images": [
+
+    ],
+    "detailedDescription": [
+
+    ]
+  },
+  {
+    "id": "3",
+    "name": "2022 GovHack - Rintern",
+    "description": "A solution connects businesses, communities, and individuals together, by identifying eligible grants and co-working opportunities.",
+    "skills": "HTML, CSS, JavaScript",
+    "image": "/img/rintern_logo.JPEG",
+    "images": [
+      "/img/govhack-home.png",
+      "/img/govhack-home2.png",
+      "/img/govhack-home3.png"
+    ],
+    "detailedDescription": [
+      {
+        "type": "title",
+        "content": "Team Profile"
+      },
+      {
+        "type": "paragraph",
+        "content": "You can read more about this project here:"
+      },
+      {
+        "type": "link",
+        "title": "GovHack 2022 Hackerspace",
+        "content": "https://2022.hackerspace.govhack.org/projects/rintern"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Anywhere Hotel Website",
+    "description": "Design a hotel's website",
+    "skills": "HTML, CSS, JavaScript, Figma",
+    "image": "/img/anywhere-home.gif",
+    "images": [
+      "/img/anywhere-home.gif",
+      "/img/anywhere-destination.gif",
+      "/img/anywhere-exp.gif"
+    ],
+    "detailedDescription": [
+
+    ]
+  },
+  {
+    "id": "1",
+    "name": "2048 - Fun Puzzle Game",
+    "description": "A puzzle game where players merge tiles with matching numbers to reach the elusive 2048 tile.",
+    "skills": "Python",
+    "image": "/img/2048.gif",
+    "images": [
+      "/img/2048.gif",
+      "/img/2048-start.png",
+      "/img/2048-finish.png"
+    ],
+    "detailedDescription": [
+      {
+        "type": "title",
+        "content": "Overview"
+      },
+      {
+        "type": "paragraph",
+        "content": "2048 is a single-player game where the player tries to construct a 2048 tile on a 4x4 grid."
+      },
+      {
+        "type": "paragraph",
+        "content": "Each turn, the player moves all tiles up, down, left, or right, by pressing w, s, a, or d respectively. Tiles move in the chosen direction until they hit a wall or another tile. If a tile hits another tile with the same value the two tiles merge (in the direction of the move) into a single tile with twice the value. After this move, and before the next, a random tile is placed on a random empty board position."
+      },
+      {
+        "type": "paragraph",
+        "content": "If the player constructs a 2048 tile they win and the game ends. If no more moves can be made that would change the game state, the player loses and the game ends."
+      },
+      {
+        "type": "paragraph",
+        "content": "Implemented a GUI-based 2048 application using tkinter, following the Apple MVC structure"
+      }
+    ]
   }
 ]

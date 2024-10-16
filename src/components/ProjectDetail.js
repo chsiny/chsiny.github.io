@@ -120,9 +120,17 @@ const ProjectDetail = () => {
         project.detailedDescription.length > 0 ? (
           project.detailedDescription.map((section, index) => {
             if (section.type === "title") {
-              return <h3 className="detail-title" key={index}>{section.content}</h3>;
+              return (
+                <h3 className="detail-title" key={index}>
+                  {section.content}
+                </h3>
+              );
             } else if (section.type === "paragraph") {
-              return <p className="detail-text" key={index}>{section.content}</p>;
+              return (
+                <p className="detail-text" key={index}>
+                  {section.content}
+                </p>
+              );
             } else if (section.type === "list") {
               return (
                 <ul className="detail-list" key={index}>
@@ -131,11 +139,25 @@ const ProjectDetail = () => {
                   ))}
                 </ul>
               );
+            } else if (section.type === "link") {
+              return (
+                <a
+                  href={section.content}
+                  className="detail-text"
+                  key={index}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {section.title}
+                </a>
+              );
             }
             return null;
           })
         ) : (
-          <p><i>Description coming soon. Stay tuned for updates!</i></p>
+          <p>
+            <i>Description coming soon. Stay tuned for updates!</i>
+          </p>
         )}
       </section>
     </div>

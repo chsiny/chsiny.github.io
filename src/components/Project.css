@@ -7,7 +7,7 @@
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
   margin-bottom: 20px;
   height: auto;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.7s ease;
 }
 
 .project-details {
@@ -36,22 +36,16 @@
   color: #ccc;
 }
 
-.project-details a {
-  color: #1e90ff;
-}
-
-.skills-used {
-  margin-top: 10px;
-  color: #1e90ff; /* Highlight the skills */
+.project-details a:hover {
+  background: linear-gradient(to right, #f89100, #f7b910); /* Gradient from left to right */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Fill the text with transparent to show the gradient */
+  font-weight: bold; /* Optional: make it bold to stand out more */
 }
 
 .project-card:hover {
-  /* transform: translateY(-5px);
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.7);
-  transition: all 0.3s ease; */
   transform: scale(1.01); /* Slightly increases the size */
-  /* box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.7); */
-  /* transition: transform 1s ease, box-shadow 1s ease; */
 }
 
 .view-all {
@@ -61,7 +55,7 @@
 @media only screen and (min-width: 700px) {
   .project-card {
     display: grid;
-    grid-template-columns: 200px 1fr; /* Image occupies a fixed width, content takes up the remaining space */
+    grid-template-columns: 3fr 7fr; /* Image occupies a fixed width, content takes up the remaining space */
     gap: 20px;
     align-items: flex-start;
     height: 150px;
