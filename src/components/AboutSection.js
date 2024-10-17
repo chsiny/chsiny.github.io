@@ -10,6 +10,9 @@ const AboutSection = ({ openModal }) => {
 
   return (
     <header className="landing-section">
+      <div class="sun"></div>
+      <div class="sunburst"></div>
+      <div class="moon"></div>
       <h1 className="animate-text">Hi, I'm Jerry Chen</h1>
       <h3 className="animate-text">
         <span className="highlight">Software Engineer</span> with a passion for

@@ -8,7 +8,6 @@ import projectsData from "./data/projects.json"; // Your project data
 import Project from "./components/Project"; // Project component for displaying each project
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
-import StarsBackground from "./components/StarsBackground";
 import FadeInSection from "./components/FadeInSection";
 import "./App.css";
 
@@ -40,7 +39,6 @@ function App() {
             path="/"
             element={
               <>
-                <StarsBackground />
                 <FadeInSection>
                   <AboutSection openModal={openModal} />
                 </FadeInSection>

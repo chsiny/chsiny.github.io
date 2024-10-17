@@ -36,7 +36,11 @@ a {
 }
 
 .highlight {
-  background: linear-gradient(to right, #f89100, #f7b910); /* Gradient from left to right */
+  background: linear-gradient(
+    to right,
+    #f89100,
+    #f7b910
+  ); /* Gradient from left to right */
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; /* Fill the text with transparent to show the gradient */
@@ -81,17 +85,49 @@ a {
   height: 100vh;
 }
 
+/* The sun */
+.sun {
+  position: absolute;
+  top: 10%;
+  left: -15%;
+  width: 130px;
+  height: 130px;
+  background: radial-gradient(circle, #ffe135, #ff8c00);
+  border-radius: 50%;
+  box-shadow: 0 0 50px rgba(255, 215, 0, 0.8);
+  z-index: -3;
+  animation: eclipse 2s linear;
+}
+
+/* The moon (eclipse effect) */
+.moon {
+  position: absolute;
+  top: 10%;
+  left: -16%;
+  width: 130px;
+  height: 130px;
+  background-color: black;
+  border-radius: 50%;
+  z-index: -2;
+}
+
+/* Eclipse animation */
+@keyframes eclipse {
+  0% {
+    left: -16%;
+  }
+  100% {
+    left: -15%;
+  }
+}
+
 /* Text Animation - Gradual Light-Up */
 .animate-text {
-  background: linear-gradient(
-    90deg,
-    #fff 0%,
-    #000 100%
-  );
+  background: linear-gradient(90deg, #fff 0%, #000 100%);
   background-clip: text !important; /* Clip the background to the text */
   -webkit-background-clip: text;
   color: transparent; /* Make the text itself transparent */
-  animation: draw-text 2s ease-in forwards; /* Apply the draw-text animation over 4 seconds */
+  animation: draw-text 3s ease-in forwards; /* Apply the draw-text animation over 4 seconds */
   background-size: 300%; /* Large enough background to allow smooth transition */
   background-position: 100%; /* Start with the background fully covering the light */
   margin: 30px;
@@ -190,10 +226,7 @@ h1.animate-text {
 
 .project-list {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  );
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   padding: 0;
   display: flex;
@@ -214,11 +247,60 @@ h1.animate-text {
   .projects-section {
     padding: 50px 10%;
   }
+
+  .sun,
+  .moon {
+    width: 200px;
+    height: 200px;
+    top: 20%;
+  }
+
+  .sun {
+    left: -8%;
+  }
+
+  .moon {
+    left: -9%;
+  }
+
+  /* Eclipse animation */
+  @keyframes eclipse {
+    0% {
+      left: -9.5%;
+    }
+    100% {
+      left: -8%;
+    }
+  }
 }
 
 @media only screen and (min-width: 1200px) {
   .projects-section {
     padding: 50px 20%;
     min-width: 250px;
+  }
+
+  .sun,
+  .moon {
+    width: 300px;
+    height: 300px;
+  }
+
+  .sun {
+    left: -7.4%;
+  }
+
+  .moon {
+    left: -8%;
+  }
+
+  /* Eclipse animation */
+  @keyframes eclipse {
+    0% {
+      left: -8.4%;
+    }
+    100% {
+      left: -7.4%;
+    }
   }
 }
