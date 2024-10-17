@@ -179,6 +179,7 @@ h1.animate-text {
   display: flex;
   flex-direction: column;
   max-width: 100%;
+  min-width: 250px;
 }
 
 .projects-section h2 {
@@ -211,12 +212,13 @@ h1.animate-text {
   }
 
   .projects-section {
-    padding: 50px 15%;
+    padding: 50px 10%;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .projects-section {
-    padding: 50px 22%;
+    padding: 50px 20%;
+    min-width: 250px;
   }
 }
