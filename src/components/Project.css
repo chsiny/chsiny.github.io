@@ -7,7 +7,7 @@
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
   margin-bottom: 20px;
   height: auto;
-  transition: transform 0.7s ease;
+  transition: transform 0.5s ease;
 }
 
 .project-details {
@@ -58,7 +58,7 @@
     grid-template-columns: 3fr 7fr; /* Image occupies a fixed width, content takes up the remaining space */
     gap: 20px;
     align-items: flex-start;
-    height: 150px;
+    height: 200px;
   }
 
   .project-details {
