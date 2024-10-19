@@ -128,7 +128,7 @@
   {
     "id": "5",
     "name": "AI Search in Maze",
-    "description": "This project explores AI search algorithms like for optimal pathfinding, as well as MDPs to handle non-deterministic actions. Developed with dynamic policies to demonstrate risk-reward trade-offs in gameplay.",
+    "description": "This project explores AI search algorithms for optimal pathfinding, as well as MDPs to handle non-deterministic actions. Developed with dynamic policies to demonstrate risk-reward trade-offs in gameplay.",
     "skills": "Python, Algorithms",
     "image": "/img/dragon-game.gif",
     "images": ["/img/dragon-game.gif"],
