@@ -12,9 +12,7 @@
       "/img/mbq-index.png",
       "/img/mbq-graph.png"
     ],
-    "detailedDescription": [
-
-    ]
+    "detailedDescription": []
   },
   {
     "id": "12",
@@ -30,7 +28,7 @@
     ],
     "detailedDescription": [
       {
-        "type": "title",
+        "type": "title2",
         "content": "Overview"
       },
       {
@@ -53,7 +51,7 @@
     ],
     "detailedDescription": [
       {
-        "type": "title",
+        "type": "title2",
         "content": "Introduction"
       },
       {
@@ -61,7 +59,7 @@
         "content": "AQademy is an online discussion platform that empowers students to ask questions and participate in forum-based discussions. Instructors can moderate discussions and endorse accurate answers, and students can upvote the answers they find helpful. This platform aims to enhance student engagement and promote active learning, revolutionizing the way students interact with their coursework."
       },
       {
-        "type": "title",
+        "type": "title2",
         "content": "Features"
       },
       {
@@ -77,7 +75,7 @@
         "content": "This project utilised HTML, CSS, JavaScript, jQuery, Bootstrap, and AJAX to develop a responsive frontend interface with an intuitive user experience. The backend was developed by using PHP, CodeIgniter, and MySQL to process requests, communicate with the database, and generate dynamic content on the client side."
       },
       {
-        "type": "title",
+        "type": "title2",
         "content": "Functionalities"
       },
       {
@@ -109,7 +107,7 @@
         ]
       },
       {
-        "type": "title",
+        "type": "title2",
         "content": "Further Development"
       },
       {
@@ -124,24 +122,329 @@
     "description": "Coming soon, stay tuned!",
     "skills": "Python, Reinforcement Learning",
     "image": "/img/lunarlander.gif",
-    "images": [
-
-    ],
-    "detailedDescription": [
-
-    ]
+    "images": [],
+    "detailedDescription": []
   },
   {
     "id": "5",
-    "name": "AI Plays DRAGONGAME - Search in Maze",
-    "description": "Coming soon, stay tuned!",
-    "skills": "Python, Data Structures, Algorithms, A* Search, Value Iteration, Policy Iteration",
-    "image": "/img/ai-dragon.png",
-    "images": [
-
-    ],
+    "name": "AI Search in Maze",
+    "description": "This project explores AI search algorithms like for optimal pathfinding, as well as MDPs to handle non-deterministic actions. Developed with dynamic policies to demonstrate risk-reward trade-offs in gameplay.",
+    "skills": "Python, Algorithms",
+    "image": "/img/dragon-game.gif",
+    "images": ["/img/dragon-game.gif"],
     "detailedDescription": [
-
+      {
+        "type": "title2",
+        "content": "Background"
+      },
+      {
+        "type": "paragraph",
+        "content": "DragonGame is a 2.5D Platformer game in which the player must collect all of the gems in each level and reach the exit portal, making use of a jump-and-glide movement mechanic, and avoiding landing on lava tiles. DragonGame is inspired by the “Spyro the Dragon” game series from the original PlayStation."
+      },
+      {
+        "type": "paragraph",
+        "content": "Levels in DragonGame are composed of a 2D grid of tiles, where each tile contains a character representing the tile type. An example game level is shown in Figure 1."
+      },
+      {
+        "type": "image",
+        "src": "/img/dragon-game-graphic.png",
+        "alt": "Figure 1: Example game level of DragonGame, showing character-based and GUI visualiser representations",
+        "caption": "Figure 1: Example game level of DragonGame, showing character-based and GUI visualiser representations"
+      },
+      {
+        "type": "title2",
+        "content": "Uniform Cost Search (UCS) and A* Search"
+      },
+      {
+        "type": "paragraph",
+        "content": "To optimally solve a level, the AI agent must find a sequence of actions which collects all gems and reaches the exit while incurring the minimum possible action cost."
+      },
+      {
+        "type": "paragraph",
+        "content": "The support code can be found at here:"
+      },
+      {
+        "type": "link",
+        "title": "UQ COMP3702 a1 support",
+        "content": "https://gitlab.com/3702-2023/a1-support"
+      },
+      {
+        "type": "title3",
+        "content": "Overview"
+      },
+      {
+        "type": "paragraph",
+        "content": "Developed a program that outputs a path (series of actions) for the agent utilising Uniform Cost Search (UCS) and A* search."
+      },
+      {
+        "type": "title3",
+        "content": "Results"
+      },
+      {
+        "type": "image",
+        "src": "/img/dragon-game-result-1.png",
+        "alt": "Figure 2: Comparison of UCS and A* Search",
+        "caption": "Figure 2: Comparison of UCS and A* Search"
+      },
+      {
+        "type": "title3",
+        "content": "Heuristics"
+      },
+      {
+        "type": "paragraph",
+        "content": "When examining the number of nodes on the fringe or frontier in both Uniform Cost Search (UCS) and A* search, a pattern emerges as the game complexity escalates from L1 to L6. Intriguingly, A* search consistently maintains a smaller number of nodes on the fringe compared to UCS, particularly from L1 to L6. This indicates that A* search is adept at being more strategic in its exploration, potentially discarding fewer promising paths early in the process. This efficiency is a result of the heuristic function's role in guiding the search."
+      },
+      {
+        "type": "paragraph",
+        "content": "Similarly, the standout observation here is the consistent advantage held by A* search. It continually explores fewer nodes compared to UCS. This points to A* search's knack for navigating the state space more effectively, possibly by discarding fewer promising avenues early on. This becomes especially beneficial as the complexity of the game increases."
+      },
+      {
+        "type": "paragraph",
+        "content": "In runtime performance, A* search consistently outperforms UCS. This aligns well with the patterns observed in nodes explored and on the fringe. The heuristic function's role here becomes clear—it guides the search toward favourable paths, thereby trimming the number of nodes that need to expand."
+      },
+      {
+        "type": "paragraph",
+        "content": "In summary, the heuristic function aims to estimate the cost from a given state to the goal state. This estimation helps the algorithm make informed decisions about which paths to explore, resulting in faster runtimes and a more focused search compared to UCS. Still, it's crucial to recognize that the quality of the heuristic can make or break the A* search. A thoughtfully designed heuristic can significantly amplify efficiency, while an inadequate one might lead to suboptimal outcomes. Additionally, while A* search is often more efficient, it might entail more computational effort to compute heuristic values."
+      },
+      {
+        "type": "title2",
+        "content": "Markov Decision Process (MDP)"
+      },
+      {
+        "type": "paragraph",
+        "content": "In this level, actions may have non-deterministic outcomes."
+      },
+      {
+        "type": "paragraph",
+        "content": "To optimally solve a level, your AI agent must find a ''policy (mapping from states to actions)'' which collects all gems and reaches the exit while incurring the minimum possible ''expected'' action cost."
+      },
+      {
+        "type": "paragraph",
+        "content": "The support code can be found at here:"
+      },
+      {
+        "type": "link",
+        "title": "UQ COMP3702 a2 support",
+        "content": "https://gitlab.com/3702-2023/a2-support"
+      },
+      {
+        "type": "title3",
+        "content": "Overview"
+      },
+      {
+        "type": "paragraph",
+        "content": "Developed planning algorithms for determining the optimal policy (mapping from states to actions) for the agent."
+      },
+      {
+        "type": "paragraph",
+        "content": "The probability of ending up in state s’ given that we were in state s and did action a. More specifically, when the agent takes an action, several factors that would affect the probability of the next state, including the tile below its current position, the distribution of probability of the action, and whether the next state is a collision tile, etc. For example, if the agent act WALK LEFT above a ladder tile, there is a chance that it moves down by 2 instead of moves left by 1."
+      },
+      {
+        "type": "paragraph",
+        "content": "The reward function gives us R (s, a) for a given state s and action a, and affected by factors such as action cost, penalties, and goal state. For example, if the agent encounters a lava tile, the reward will be the cost corresponding to the action it took minus the game over penalty."
+      },
+      {
+        "type": "paragraph",
+        "content": "The discount factor, γ ∈ [0, 1) gives the present value of future rewards. This prioritizes immediate reward over delayed reward:"
+      },
+      {
+        "type": "paragraph",
+        "content": "1. γ close to 0 leads to “myopic” evaluation"
+      },
+      {
+        "type": "paragraph",
+        "content": "2. γ close to 1 leads to “far-sighted” evaluation"
+      },
+      {
+        "type": "title3",
+        "content": "Comparison of Algorithms"
+      },
+      {
+        "type": "bold",
+        "content": "Value Iteration:"
+      },
+      {
+        "type": "paragraph",
+        "content": "Using synchronous updates, iterates over all states in each iteration, and updates their values based on the current estimates of neighbouring states."
+      },
+      {
+        "type": "bold",
+        "content": "Policy Iteration:"
+      },
+      {
+        "type": "paragraph",
+        "content": "Using synchronous update, which performs one step of policy evaluation using linear algebra to solve the Bellman equation and one step of policy improvement by selecting the action that maximizes the expected cumulative reward based on the current values obtained from policy evaluation."
+      },
+      {
+        "type": "image",
+        "src": "/img/dragon-game-result-2.png",
+        "alt": "Figure 3: Comparison of VI and PI",
+        "caption": "Figure 3: Comparison of VI and PI"
+      },
+      {
+        "type": "bold",
+        "content": "Time to Converge:"
+      },
+      {
+        "type": "paragraph",
+        "content": "In all scenarios, Value Iteration generally takes less time to converge compared to Policy Iteration. It has a more direct approach to find the optimal value function and policy. It iteratively refines the value function by considering the maximum expected future reward achievable from each state, which can be computationally efficient."
+      },
+      {
+        "type": "paragraph",
+        "content": "Policy Iteration, on the other hand, involves both policy evaluation (which can be time-consuming because of solving the set of linear equations, especially in scenarios where there are many states) and policy improvement steps. For example, in case L5, we can see the number of PI iterations is 38 compared to VI is 208, however, their converged time is close."
+      },
+      {
+        "type": "bold",
+        "content": "Number of Iterations:"
+      },
+      {
+        "type": "paragraph",
+        "content": "Value Iteration requires more iterations because it explores multiple possible policies during the value iteration process before eventually converging to the optimal policy."
+      },
+      {
+        "type": "paragraph",
+        "content": "Policy Iteration tends to converge faster in terms of the number of iterations because it alternates between policy evaluation and policy improvement. Once it finds a policy that is greedy with respect to the current value function, it can converge more quickly in terms of iterations."
+      },
+      {
+        "type": "bold",
+        "content": "Summary"
+      },
+      {
+        "type": "paragraph",
+        "content": "A special result in L3, where the agent needs to take an action to reach the goal state, but the action has a low probability of success. Under this high uncertainty, VI may require more iterations to accurately estimate the values and find an optimal policy, resulting the number of iterations dramatically increased (574)."
+      },
+      {
+        "type": "paragraph",
+        "content": "In summary, the differences in converged time and the number of iterations between Value Iteration and Policy Iteration make sense based on their respective algorithms and the computational requirements of their steps. Value Iteration iterates faster in terms of time, while Policy Iteration tends to require fewer iterations."
+      },
+      {
+        "type": "title3",
+        "content": "Investigating Optimal Policy Variation"
+      },
+      {
+        "type": "paragraph",
+        "content": "Considering testcase L4, the agent must cross from the bottom left (to collect a gem) to the bottom right (to reach the exit). There are 3 possible paths from left to right (bottom, middle and top). Because of the chance to fall when performing a walk action while on top of a ladder, there is a risk of falling into the lava in the centre."
+      },
+      {
+        "type": "image",
+        "src": "/img/dragon-game-L4.png",
+        "alt": "Figure 4: Testcase L4",
+        "caption": "Figure 4: Testcase L4"
+      },
+      {
+        "type": "paragraph",
+        "content": "* The bottom path has the lowest cost (fewest jumps needed) and highest risk, as the lava tiles above prevent using jump+glide (which is more expensive than walking but has no fall risk)."
+      },
+      {
+        "type": "paragraph",
+        "content": "* The middle path also has lava tiles above preventing jump+glide, but if the agent falls once it can glide and land in a safe part of the bottom path for a second chance at making it across."
+      },
+      {
+        "type": "paragraph",
+        "content": "* The top path has enough headroom to allow jump+glide (which eliminates the risk of falling), but requires a large number of jumps to reach, so is expensive."
+      },
+      {
+        "type": "paragraph",
+        "content": "The level of risk presented by the lower paths can be tuned by adjusting the ladder f all prob and the game over penalty."
+      },
+      {
+        "type": "title3",
+        "content": "Expectation"
+      },
+      {
+        "type": "bold",
+        "content": "Value change of ladder_fall_prob"
+      },
+      {
+        "type": "paragraph",
+        "content": "A higher ladder fall probability increases the risk associated with actions that involve ladders (e.g., walking). In the Bellman optimality equation, this increased risk is reflected in the expected cumulative rewards. States and actions leading to higher chances of falling off ladders will have lower expected values because the agent wants to avoid them. Consequently, the optimal policy will favour actions and paths that minimize the risk of falling (i.e., the top path). The agent's behaviour will align with this optimal policy, and it will be more inclined to choose the safer path with a lower risk of failure."
+      },
+      {
+        "type": "paragraph",
+        "content": "Conversely, a lower ladder fall probability reduces the risk associated with ladders, resulting in higher expected values for states and actions involving ladders. In this case, the optimal policy may consider paths with ladders (bottom and middle) as more viable options because the expected rewards associated with these paths are higher. The agent's behaviour will align with this optimal policy, and it may be willing to take more risks (considering the bottom and middle paths) because the potential reward outweighs the risk."
+      },
+      {
+        "type": "bold",
+        "content": "Value change of game_over_penalty"
+      },
+      {
+        "type": "paragraph",
+        "content": "A higher game-over penalty indicates a stronger aversion to failure or falling into lava. The Bellman optimality equation reflects this by assigning lower values to states and actions with higher associated penalties for failure. Consequently, the optimal policy will prioritize paths and actions that minimize the risk of game over. The agent's behaviour will align with this optimal policy, and it will prefer paths with lower risk (i.e., the top path) to avoid incurring the high game-over penalty."
+      },
+      {
+        "type": "paragraph",
+        "content": "A lower game-over penalty makes the agent less afraid of failure, allowing it to consider paths and actions with a higher risk of falling into lava. The Bellman equation assigns higher values to these states and actions, reflecting their attractiveness. Therefore, the optimal policy may favour more cost-efficient paths, even if they involve some risk (e.g., the bottom or middle path). The agent's behaviour will align with this optimal policy, and it may take more risks if the potential rewards or cost savings outweigh the game-over penalty."
+      },
+      {
+        "type": "paragraph",
+        "content": "In summary, changes in ladder fall probability and game-over penalty impact the expected values of states and actions in the Bellman optimality equation. The optimal policy, driven by these values, will adapt to prioritize paths that balance the trade-off between risk and reward according to the changing parameters."
+      },
+      {
+        "type": "title3",
+        "content": "Results"
+      },
+      {
+        "type": "image",
+        "src": "/img/dragon-game-result-2-table.png",
+        "alt": "Figure 5: Policy Variation Results",
+        "caption": "Figure 5: Policy Variation Results"
+      },
+      {
+        "type": "paragraph",
+        "content": "In general, as ladder fall probability decreases (risk decreases) and game over penalty increases (risk aversion increases), the agent tends to favour safer paths (top path) more often. Conversely, as ladder fall probability increases and the game-over penalty decreases, the agent may choose riskier paths (middle or bottom) to optimize rewards or cost-efficiency."
+      },
+      {
+        "type": "bold",
+        "content": "* High Risk, Low Penalty:"
+      },
+      {
+        "type": "paragraph",
+        "content": "When ladder fall probability is high (0.01), and the game-over penalty is low (1 and 0.01), the agent prefers the middle path, slightly favouring cost-efficiency over safety."
+      },
+      {
+        "type": "bold",
+        "content": "* Low Risk, Low Penalty:"
+      },
+      {
+        "type": "paragraph",
+        "content": "When the ladder fall probability is low (0.001 and 0.000001), and the game-over penalty is low (1 and 0.01), the agent prefers the bottom path, which is the most cost-efficient path."
+      },
+      {
+        "type": "bold",
+        "content": "* Low Risk, High Penalty:"
+      },
+      {
+        "type": "paragraph",
+        "content": "When the game-over penalty is high (500), the agent strongly prefers the top path to minimize the risk of encountering the high game-over penalty, even when the ladder fall probability is very low (0.000001)."
+      },
+      {
+        "type": "paragraph",
+        "content": "These results basically align with the expectation, where the optimal policy is influenced by the trade-off between ladder fall probability and game over penalty. However, the agent tends to prioritize safety when the penalty is high, even when the failure probability is very low. And although the penalty is very low, it does not completely choose cost-efficiency over safety when the risk is still high. Only when both the penalty and the probability reach sufficiently low levels, it becomes more willing to take risks and choose the most cost-efficient path (bottom)."
+      },
+      {
+        "type": "title2",
+        "content": "References"
+      },
+      {
+        "type": "paragraph",
+        "content": "* David Poole and Alan Mackworth, Artificial Intelligence: foundations of computational agents, 2E, CUP, 2017 http://https://artint.info/."
+      },
+      {
+        "type": "paragraph",
+        "content": "* COMP3702 Artificial Intelligence Semester 2, 2023 Week 6-7 Lecture slides"
+      },
+      {
+        "type": "paragraph",
+        "content": "* COMP3702 Artificial Intelligence Semester 2, 2023 Tutorial 6 – Solutions"
+      },
+      {
+        "type": "paragraph",
+        "content": "* Function: get_transition_outcomes and pi_get_transition_outcomes are adapted from COMP3702 SUPPLIED CODE FOR TRANSITION FUNCTION, NJC"
+      },
+      {
+        "type": "paragraph",
+        "content": "* Usage of ChatGPT-3.5"
+      }
     ]
   },
   {
@@ -150,12 +453,8 @@
     "description": "I implemented various data structures from scratch, ranging from fundamental to advanced. I then applied these data structures along with algorithms to solve challenging problems.",
     "skills": "Python, Data Structures, Algorithms",
     "image": "/img/quicksort.gif",
-    "images": [
-
-    ],
-    "detailedDescription": [
-
-    ]
+    "images": [],
+    "detailedDescription": []
   },
   {
     "id": "3",
@@ -170,7 +469,7 @@
     ],
     "detailedDescription": [
       {
-        "type": "title",
+        "type": "title2",
         "content": "Team Profile"
       },
       {
@@ -195,9 +494,7 @@
       "/img/anywhere-destination.gif",
       "/img/anywhere-exp.gif"
     ],
-    "detailedDescription": [
-
-    ]
+    "detailedDescription": []
   },
   {
     "id": "1",
@@ -205,14 +502,10 @@
     "description": "A puzzle game where players merge tiles with matching numbers to reach the elusive 2048 tile.",
     "skills": "Python",
     "image": "/img/2048.gif",
-    "images": [
-      "/img/2048.gif",
-      "/img/2048-start.png",
-      "/img/2048-finish.png"
-    ],
+    "images": ["/img/2048.gif", "/img/2048-start.png", "/img/2048-finish.png"],
     "detailedDescription": [
       {
-        "type": "title",
+        "type": "title2",
         "content": "Overview"
       },
       {

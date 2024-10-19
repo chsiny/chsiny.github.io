@@ -94,7 +94,7 @@ a {
   height: 130px;
   background: radial-gradient(circle, #ffe135, #ff8c00);
   border-radius: 50%;
-  box-shadow: 0 0 50px rgba(255, 215, 0, 0.8);
+  box-shadow: 0 0 50px rgba(255, 215, 0, 0.9);
   z-index: -3;
   animation: eclipse 2s linear;
 }
@@ -297,7 +297,7 @@ h1.animate-text {
   /* Eclipse animation */
   @keyframes eclipse {
     0% {
-      left: -8.4%;
+      left: -8.8%;
     }
     100% {
       left: -7.4%;

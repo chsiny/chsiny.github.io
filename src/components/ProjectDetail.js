@@ -119,7 +119,13 @@ const ProjectDetail = () => {
         {project.detailedDescription &&
         project.detailedDescription.length > 0 ? (
           project.detailedDescription.map((section, index) => {
-            if (section.type === "title") {
+            if (section.type === "title2") {
+              return (
+                <h2 className="detail-title" key={index}>
+                  {section.content}
+                </h2>
+              );
+            } else if (section.type === "title3") {
               return (
                 <h3 className="detail-title" key={index}>
                   {section.content}
@@ -130,6 +136,12 @@ const ProjectDetail = () => {
                 <p className="detail-text" key={index}>
                   {section.content}
                 </p>
+              );
+            } else if (section.type === "bold") {
+              return (
+                <b className="detail-text" key={index}>
+                  {section.content}
+                </b>
               );
             } else if (section.type === "list") {
               return (
@@ -150,6 +162,19 @@ const ProjectDetail = () => {
                 >
                   {section.title}
                 </a>
+              );
+            } else if (section.type === "image") {
+              return (
+                <div className="detail-image-container" key={index}>
+                  <img
+                    src={section.src}
+                    alt={section.alt || "Description Image"}
+                    className="detail-image"
+                  />
+                  {section.caption && (
+                    <p className="image-caption">{section.caption}</p>
+                  )}
+                </div>
               );
             }
             return null;
