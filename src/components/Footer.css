@@ -18,10 +18,18 @@
   color: white;
   font-size: 24px;
   transition: color 0.3s ease;
+  text-decoration: none;
 }
 
 .footer .social-icons a:hover {
-  color: #aaa; /* Lighter hover effect */
+  background: linear-gradient(
+    to right,
+    #f89100,
+    #f7b910
+  ); /* Gradient from left to right */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Fill the text with transparent to show the gradient */
 }
 
 .footer p {

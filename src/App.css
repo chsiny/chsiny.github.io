@@ -88,7 +88,7 @@ a {
 /* The sun */
 .sun {
   position: absolute;
-  top: 10%;
+  top: 15%;
   left: -15%;
   width: 130px;
   height: 130px;
@@ -102,7 +102,7 @@ a {
 /* The moon (eclipse effect) */
 .moon {
   position: absolute;
-  top: 10%;
+  top: 15%;
   left: -16%;
   width: 130px;
   height: 130px;

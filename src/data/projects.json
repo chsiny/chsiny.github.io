@@ -118,17 +118,312 @@
   },
   {
     "id": "6",
-    "name": "AI Play Game with Uncertainty",
-    "description": "Coming soon, stay tuned!",
-    "skills": "Python, Reinforcement Learning",
+    "name": "CartPole and LunarLander",
+    "description": "In this project, I implemented Deep Reinforcement Learning algorithms and analysed their parameters and performance.",
+    "skills": "Python, PyTorch",
     "image": "/img/lunarlander.gif",
-    "images": [],
-    "detailedDescription": []
+    "images": [
+      "/img/cart_pole.gif",
+      "/img/lunarlander.gif"
+    ],
+    "detailedDescription": [
+      {
+        "type": "title2",
+        "content": "Overview"
+      },
+      {
+        "type": "paragraph",
+        "content": "In my recent project for the COMP3702 Artificial Intelligence course, I explored Reinforcement Learning (RL) concepts, implemented various Deep Q-Network (DQN) architectures, and evaluated agent performance in CartPole and LunarLander environments. This experience gave me a deeper understanding of RL algorithms, hyperparameter tuning, and the trade-offs between performance and stability."
+      },
+      {
+        "type": "title2",
+        "content": "Background and Tools Used"
+      },
+      {
+        "type": "title3",
+        "content": "Gymnasium API"
+      },
+      {
+        "type": "paragraph",
+        "content": "This project made use of the OpenAI Gym/Gymnasium1 , which is a standard API for reinforcement learning with a diverse collection of reference environments."
+      },
+      {
+        "type": "paragraph",
+        "content": "I investigated the Cart Pole and Lunar Lander environments shown in Figure 1, which are within the classic-control and box2d set of environments respectively"
+      },
+      {
+        "type": "image",
+        "src": "/img/cart-pole-lunar-lander-env.png",
+        "alt": "Figure 1: Cart Pole and Lunar Lander environments",
+        "caption": "Figure 1: Cart Pole and Lunar Lander environments"
+      },
+      {
+        "type": "title3",
+        "content": "PyTorch"
+      },
+      {
+        "type": "paragraph",
+        "content": "To train neural networks, I used the PyTorch machine learning framework. More instruction can be found here:"
+      },
+      {
+        "type": "link",
+        "title": "Official PyTorch DQN tutorial",
+        "content": "https://pytorch.org/get-started/locally/"
+      },
+      {
+        "type": "title3",
+        "content": "Algorithms Explored"
+      },
+      {
+        "type": "paragraph",
+        "content": "1. DQN: A baseline Deep Q-Network"
+      },
+      {
+        "type": "paragraph",
+        "content": "2. Double DQN: Reduces overestimation bias in action-value estimation"
+      },
+      {
+        "type": "paragraph",
+        "content": "3. Dueling DQN: Separates state values from action advantages for better generalization."
+      },
+      {
+        "type": "title3",
+        "content": "Performance Metric – 100-Step Moving Average Reward (R100)"
+      },
+      {
+        "type": "paragraph",
+        "content": "I assessed agent performance using R100, the moving average of rewards over the last 100 episodes. This approach smooths out reward variability due to exploration randomness, providing clearer insights into learning progress."
+      },
+      {
+        "type": "title3",
+        "content": "Tutorials and Resources Used"
+      },
+      {
+        "type": "link",
+        "title": "Official DQN PyTorch Tutorial",
+        "content": "https://pytorch.org/tutorials/intermediate/reinforcement_q_learning.html"
+      },
+      {
+        "type": "link",
+        "title": "COMP3702 tutorial sample code",
+        "content": "https://github.com/comp3702/tutorial11"
+      },
+      {
+        "type": "title2",
+        "content": "Goals of the Project"
+      },
+      {
+        "type": "paragraph",
+        "content": "1. Explore key RL concepts: Q-learning, Value Iteration, and Deep Q-Networks (DQN)."
+      },
+      {
+        "type": "paragraph",
+        "content": "2. Conduct experiments to compare agent performance in the CartPole and LunarLander environments."
+      },
+      {
+        "type": "paragraph",
+        "content": "3. Optimize hyperparameters (learning rate, epsilon decay) to achieve better results."
+      },
+      {
+        "type": "paragraph",
+        "content": "4. Use Dueling DQN architectures to balance performance and stability."
+      },
+      {
+        "type": "title2",
+        "content": "Experiments and Results"
+      },
+      {
+        "type": "title3",
+        "content": "Experiments with CartPole"
+      },
+      {
+        "type": "paragraph",
+        "content": "In the CartPole-v0 and CartPole-v1 environments, the goal was to balance a pole on a moving cart for as long as possible."
+      },
+      {
+        "type": "paragraph",
+        "content": "* CartPole-v0: Trained the agent to balance for 200 steps. The policy mainly focused on maintaining the pole angle."
+      },
+      {
+        "type": "paragraph",
+        "content": "* CartPole-v1: With 500 steps, the policy also considered the cart position, creating a more robust policy."
+      },
+      {
+        "type": "bold",
+        "content": "Key Insight"
+      },
+      {
+        "type": "paragraph",
+        "content": "The increase in values from CartPole-v0 to CartPole-v1 can be attributed to the enhanced and refined policies adopted by the agent in CartPole-v1. This version requires a more intricate balancing act, focusing not only on the pole angle but also on the cart's positional stability over a more extended period, ultimately resulting in higher performance values."
+      },
+      {
+        "type": "image",
+        "src": "/img/cart_0.png",
+        "alt": "Figure 2: Episode Reward Graph for CartPole-v0",
+        "caption": "Figure 2: Episode Reward Graph for CartPole-v0"
+      },
+      {
+        "type": "image",
+        "src": "/img/cart_1.png",
+        "alt": "Figure 3: Episode Reward Graph for CartPole-v1",
+        "caption": "Figure 3: Episode Reward Graph for CartPole-v1"
+      },
+      {
+        "type": "title3",
+        "content": "Hard vs. Soft Updates in DQN Training"
+      },
+      {
+        "type": "paragraph",
+        "content": "I experimented with two update strategies for stabilizing training:"
+      },
+      {
+        "type": "paragraph",
+        "content": "* Soft Updates: Continuously update the target network, providing faster convergence and consistent rewards. (Converged within 800 episodes.)"
+      },
+      {
+        "type": "paragraph",
+        "content": "* Hard Updates: Periodically synchronize the target network, which led to reward variability. (Took 1,267 episodes to achieve similar performance but with higher reward fluctuations.)"
+      },
+      {
+        "type": "paragraph",
+        "content": "It's worth noting that hard updates exhibited a wider range of reward variability, accompanied by more frequent and abrupt fluctuations in rewards. This behaviour can be attributed to the nature of periodic synchronization, which is more prone to using outdated Q-value estimations. As a result, this approach introduces broader variations in rewards, making the learning process less stable. In contrast, soft updates maintain more consistent and stable rewards over time."
+      },
+      {
+        "type": "paragraph",
+        "content": "However, it's essential to knowledge that the performance of these two methods is dependent on the specific problem and the environment's configuration. Different environments may respond differently to soft updates and periodic synchronization, leading to varying outcomes."
+      },
+      {
+        "type": "image",
+        "src": "/img/q3_soft_1.png",
+        "alt": "Figure 4: Soft Updates",
+        "caption": "Figure 4: Soft Updates"
+      },
+      {
+        "type": "image",
+        "src": "/img/q3_hard_1.png",
+        "alt": "Figure 5: Hard Updates",
+        "caption": "Figure 5: Hard Updates"
+      },
+      {
+        "type": "title3",
+        "content": "Hyperparameter Tuning - Learning Rate (α) in CartPole"
+      },
+      {
+        "type": "paragraph",
+        "content": "The learning rate (α) hyperparameter indirectly influences the trade-off between exploration and exploitation by controlling the pace at which the agent updates its value estimates. A high learning rate encourages rapid adaptation and indirectly results in high reward variation. A moderate learning rate strikes a balance, leading to moderate reward fluctuations. A low learning rate indirectly promotes minimal exploration and lower reward variation, resulting in a more deterministic learning process. However, the choice of learning rate should consider the specific characteristics of the environment, the trade-off between exploration and exploitation, and the desired convergence speed."
+      },
+      {
+        "type": "image",
+        "src": "/img/cartpole_learn-rate-005.png",
+        "alt": "Figure 6: CartPole-v1 Learning Rate 0.005",
+        "caption": "Figure 6: CartPole-v1 Learning Rate 0.005"
+      },
+      {
+        "type": "image",
+        "src": "/img/cartpole_learn-rate-0005.png",
+        "alt": "Figure 7: CartPole-v1 Learning Rate 0.0005",
+        "caption": "Figure 7: CartPole-v1 Learning Rate 0.0005"
+      },
+      {
+        "type": "image",
+        "src": "/img/cartpole_learn-rate-00005.png",
+        "alt": "Figure 8: CartPole-v1 Learning Rate 0.00005",
+        "caption": "Figure 8: CartPole-v1 Learning Rate 0.00005"
+      },
+      {
+        "type": "title3",
+        "content": "Dueling DQN vs. Two-Hidden Network: Stability vs. Speed"
+      },
+      {
+        "type": "paragraph",
+        "content": "I compared Dueling DQN with a simpler two-hidden network to assess trade-offs between convergence speed and reward stability."
+      },
+      {
+        "type": "paragraph",
+        "content": "Two-hidden network converged in 800 episodes but exhibited occasional reward drops due to aggressive exploration."
+      },
+      {
+        "type": "paragraph",
+        "content": "Dueling DQN took 1,400 episodes to converge but provided more consistent rewards with fewer fluctuations."
+      },
+      {
+        "type": "paragraph",
+        "content": "Dueling DQN is more suitable for stable performance, while simpler architectures can converge faster but with more variability."
+      },
+      {
+        "type": "title3",
+        "content": "Epsilon Decay Strategy"
+      },
+      {
+        "type": "paragraph",
+        "content": "I used different epsilon decay strategies to balance exploration and exploitation:"
+      },
+      {
+        "type": "paragraph",
+        "content": "* Higher Epsilon Start (0.8): Ensured more exploration early in training."
+      },
+      {
+        "type": "paragraph",
+        "content": "* Lower Epsilon Final (0.001): Shifted towards exploitation, ensuring the agent relied on its learned policy."
+      },
+      {
+        "type": "title2",
+        "content": "Lessons Learned and Takeaways"
+      },
+      {
+        "type": "paragraph",
+        "content": "This project gave me hands-on experience with:"
+      },
+      {
+        "type": "paragraph",
+        "content": "1. Exploration vs. Exploitation Trade-offs: Fine-tuning hyperparameters to balance learning."
+      },
+      {
+        "type": "paragraph",
+        "content": "2. Algorithm Selection: Dueling DQN offers stability, while simpler architectures can converge faster."
+      },
+      {
+        "type": "paragraph",
+        "content": "3. Tools and Frameworks: Working with PyTorch and Gymnasium API strengthened my skills in using industry-standard tools for RL development."
+      },
+      {
+        "type": "paragraph",
+        "content": "Through this project, I gained a deep understanding of Reinforcement Learning concepts, experimented with multiple DQN architectures, and explored the impact of hyperparameter tuning on agent performance. This experience has laid a strong foundation for future work in multi-agent systems and robotics."
+      },
+      {
+        "type": "title2",
+        "content": "References"
+      },
+      {
+        "type": "paragraph",
+        "content": "* Alina Bialkowski. (2023, Oct). UQ COMP3702 Week9, 10, 11 Slides"
+      },
+      {
+        "type": "paragraph",
+        "content": "* COMP3702 teaching team. dqn_gym.py from https://github.com/comp3702/tutorial11"
+      },
+      {
+        "type": "paragraph",
+        "content": "* Adam Paszke, Mark Towers. (2023). Reinforcement learning (DQN) tutorial"
+      },
+      {
+        "type": "paragraph",
+        "content": "* Richard S. Sutton, Andrew G. Barto. (2018). Reinforcement Learning An Introduction"
+      },
+      {
+        "type": "paragraph",
+        "content": "* Ziyu Wang, Tom Schaul, Matteo Hessel, Hado van Hasselt, Marc Lanctot, Nando de Freitas. (2015, Nov 20). Duelling Network Architectures for Deep Reinforcement Learning"
+      },
+      {
+        "type": "paragraph",
+        "content": "* Usage of ChatGPT-3.5"
+      }
+    ]
   },
   {
     "id": "5",
     "name": "AI Search in Maze",
-    "description": "This project explores AI search algorithms for optimal pathfinding, as well as MDPs to handle non-deterministic actions. Developed with dynamic policies to demonstrate risk-reward trade-offs in gameplay.",
+    "description": "This project explored AI search algorithms for optimal pathfinding, as well as MDPs to handle non-deterministic actions. Developed with dynamic policies to demonstrate risk-reward trade-offs in gameplay.",
     "skills": "Python, Algorithms",
     "image": "/img/dragon-game.gif",
     "images": ["/img/dragon-game.gif"],

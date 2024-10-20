@@ -153,15 +153,16 @@ const ProjectDetail = () => {
               );
             } else if (section.type === "link") {
               return (
-                <a
-                  href={section.content}
-                  className="detail-text"
-                  key={index}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {section.title}
-                </a>
+                <p key={index}>
+                  <a
+                    href={section.content}
+                    className="detail-text"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {section.title}
+                  </a>
+                </p>
               );
             } else if (section.type === "image") {
               return (
