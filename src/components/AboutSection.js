@@ -14,7 +14,7 @@ const AboutSection = ({ openModal }) => {
       <div className="moon"></div>
       <h1 className="animate-text">Hi, I'm Jerry Chen</h1>
       <h3 className="animate-text">
-        <span className="highlight">Software Engineer</span> with a passion for
+        <span className="highlight">Software Engineer</span> specialised in
         AI and Cloud Technology
       </h3>
       <button className="about-button" onClick={openModal}>
