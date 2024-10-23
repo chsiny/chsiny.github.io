@@ -3,12 +3,13 @@ import { Routes, Route, Link } from "react-router-dom";
 import AboutSection from "./components/AboutSection"; // About Me section as a component
 import ProjectList from "./components/ProjectList"; // Full project list page
 import ProjectDetail from "./components/ProjectDetail"; // Individual project detail page
-import Modal from "./components/Modal"; // Modal for About Me
+// import Modal from "./components/Modal";
 import projectsData from "./data/projects.json"; // Your project data
 import Project from "./components/Project"; // Project component for displaying each project
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import FadeInSection from "./components/FadeInSection";
+import AboutMe from "./components/AboutMe";
 import "./App.css";
 
 function App() {
@@ -30,6 +31,9 @@ function App() {
           <li>
             <Link to="/projects">Projects</Link>
           </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
         </ul>
       </nav>
       <div className="main-content">
@@ -42,7 +46,7 @@ function App() {
                 <FadeInSection>
                   <AboutSection openModal={openModal} />
                 </FadeInSection>
-                <Modal show={showModal} handleClose={closeModal} />
+                {/* <Modal show={showModal} handleClose={closeModal} /> */}
 
                 {/* Top 5 Projects Section */}
                 <section className="projects-section">
@@ -69,6 +73,7 @@ function App() {
               </>
             }
           />
+          <Route path="/about" element={<AboutMe />} />
 
           {/* Full Project List Page */}
           <Route path="/projects" element={<ProjectList />} />

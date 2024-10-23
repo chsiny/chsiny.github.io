@@ -5,7 +5,7 @@ import Project from './Project'; // Reuse the Project component for each project
 const ProjectList = () => {
   return (
     <div className="projects-section">
-      <h2>Projects</h2>
+      <h2 className='project'>Projects</h2>
       <div className="project-list">
         {projectsData.map((project, index) => (
           <Project

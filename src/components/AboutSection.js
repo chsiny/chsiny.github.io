@@ -17,9 +17,9 @@ const AboutSection = ({ openModal }) => {
         <span className="highlight">Software Engineer</span> specialised in
         AI and Cloud Technology
       </h3>
-      <button className="about-button" onClick={openModal}>
+      {/* <button className="about-button" onClick={openModal}>
         About Me
-      </button>
+      </button> */}
       <div className="scroll-down" onClick={scrollToNextSection}>
         <span className="double-arrows">
           <i className="fas fa-chevron-down"></i>

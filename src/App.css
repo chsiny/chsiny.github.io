@@ -49,9 +49,11 @@ a {
 
 .navbar {
   width: 100%; /* Full width of the screen */
+  height: 5%;
   display: flex;
   z-index: 1;
   justify-content: center; /* Center the items horizontally */
+  align-items: center;
   padding: 20px 0; /* Add some padding for spacing */
   position: fixed;
   background-color: rgba(0, 0, 0, 0.5);
@@ -221,7 +223,12 @@ h1.animate-text {
 .projects-section h2 {
   font-size: 2rem;
   margin: 40px;
+  margin-bottom: 60px;
   color: #fff;
+}
+
+h2.project {
+  margin-top: 80px;
 }
 
 .project-list {
