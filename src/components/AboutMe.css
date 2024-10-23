@@ -172,9 +172,9 @@ p {
 }
 
 @media only screen and (min-width: 700px) {
-  /* .parallax-banner {
-    height: 600px;
-  } */
+  .about-me-container {
+    padding: 0 10%;
+  }
 
   .intro-section {
     display: flex;
@@ -196,5 +196,11 @@ p {
 
   .more-section {
     padding: 0 50px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .about-me-container {
+    padding: 0 15%;
   }
 }
