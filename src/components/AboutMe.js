@@ -126,8 +126,8 @@ const AboutMe = () => {
         <section className="experience-section">
           <h2>Work Experience</h2>
           <p>
-            As a Software at The University of Queensland, I developed a
-            web-based questionnaire application to help parents monitor and
+            As a Software Engineer at The University of Queensland, I developed
+            a web-based questionnaire application to help parents monitor and
             assess their children's behaviors. I focused on creating engaging
             user interfaces and enhancing user experience through result
             visualization and features like PDF generation.
