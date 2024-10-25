@@ -49,7 +49,6 @@ a {
 
 .navbar {
   width: 100%; /* Full width of the screen */
-  height: 5%;
   display: flex;
   z-index: 1;
   justify-content: center; /* Center the items horizontally */
