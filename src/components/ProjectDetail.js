@@ -76,8 +76,17 @@ const ProjectDetail = () => {
       <h1>{project.name}</h1>
       <p>{project.description}</p>
       <p>
-        <strong>Tech Stack:</strong> {project.skills}
+        <strong>Tech Stack: </strong>
+        {project.skills}
       </p>
+      {project.github ? (
+        <p>
+          <strong>Repository: </strong>
+          <a href={project.github}>View on GitHub</a>
+        </p>
+      ) : (
+        <p></p>
+      )}
 
       {/* Image Gallery Section */}
       <section className="image-gallery">

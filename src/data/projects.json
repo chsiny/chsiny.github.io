@@ -19,6 +19,7 @@
     "name": "AI Assistant @ Desygner",
     "description": "Integrate OpenAI's function calling feature into Desygner platform",
     "skills": "Python, OpenAI, Llama Index, RAG, Redis",
+    "github": "https://github.com/chsiny/openAI-function-call",
     "image": "/img/desygner-chat1.png",
     "images": [
       "/img/desygner-chat1.png",
@@ -42,6 +43,7 @@
     "name": "AQademy",
     "description": "An online discussion forum",
     "skills": "PHP, AJAX, jQuery Bootstrap, MySQL, MongoDB, MVC, Docker, Kubernetes, GCP",
+    "github": "https://github.com/chsiny/aqademy",
     "image": "/img/aqademy.png",
     "images": [
       "/img/aqademy-uiux.png",
@@ -747,6 +749,7 @@
     "name": "DSA Implementation",
     "description": "I implemented various data structures from scratch, ranging from fundamental to advanced. I then applied these data structures along with algorithms to solve challenging problems.",
     "skills": "Python, Data Structures, Algorithms",
+    "github": "https://github.com/chsiny/practice-comp7506-a2",
     "image": "/img/quicksort.gif",
     "images": [],
     "detailedDescription": []

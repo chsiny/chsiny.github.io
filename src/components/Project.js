@@ -1,7 +1,7 @@
 import React from "react";
 import "./Project.css";
 
-const Project = ({ name, description, skills, image, link }) => {
+const Project = ({ name, description, skills, image, link, github }) => {
   return (
     <div className="project-card">
       <a href={link}>

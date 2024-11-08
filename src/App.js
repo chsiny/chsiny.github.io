@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import AboutSection from "./components/AboutSection"; // About Me section as a component
 import ProjectList from "./components/ProjectList"; // Full project list page
@@ -13,11 +13,7 @@ import AboutMe from "./components/AboutMe";
 import "./App.css";
 
 function App() {
-  const [showModal, setShowModal] = useState(false);
   const firstFiveProjects = projectsData.slice(0, 5); // Extract the top 5 projects
-
-  const openModal = () => setShowModal(true);
-  const closeModal = () => setShowModal(false);
 
   return (
     <div className="App">
@@ -44,7 +40,7 @@ function App() {
             element={
               <>
                 <FadeInSection>
-                  <AboutSection openModal={openModal} />
+                  <AboutSection/>
                 </FadeInSection>
                 {/* <Modal show={showModal} handleClose={closeModal} /> */}
 
