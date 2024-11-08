@@ -18,7 +18,7 @@
     "id": "12",
     "name": "AI Assistant @ Desygner",
     "description": "Integrate OpenAI's function calling feature into Desygner platform",
-    "skills": "Python, OpenAI, Llama Index, RAG, Redis",
+    "skills": "Python, OpenAI, LlamaIndex, RAG, Redis",
     "github": "https://github.com/chsiny/openAI-function-call",
     "image": "/img/desygner-chat1.png",
     "images": [
