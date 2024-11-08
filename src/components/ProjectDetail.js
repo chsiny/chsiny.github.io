@@ -30,6 +30,9 @@ const ProjectDetail = () => {
   console.log(project);
   return (
     <div className="project-detail">
+      <div style={{ color: "red", fontSize: "24px", textAlign: "center" }}>
+        DEBUG: This is a test message to confirm deployment
+      </div>
       <h1>{project.name}</h1>
       <p>{project.description}</p>
       <p>
