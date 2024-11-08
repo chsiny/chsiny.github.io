@@ -27,7 +27,7 @@ const ProjectDetail = () => {
   if (!project) {
     return <div>Project not found!</div>;
   }
-
+  console.log(project);
   return (
     <div className="project-detail">
       <h1>{project.name}</h1>
