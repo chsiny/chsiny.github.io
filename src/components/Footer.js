@@ -21,7 +21,7 @@ const Footer = () => {
           <i className="fab fa-linkedin"></i> {/* LinkedIn icon */}
         </a>
       </div>
-      <p>&copy; {new Date().getFullYear()} Designed and coded by Jerry Chen</p>
+      <p>&copy; {new Date().getFullYear()} test Designed and coded by Jerry Chen</p>
     </footer>
   );
 };
