@@ -36,14 +36,14 @@ const ProjectDetail = () => {
         <strong>Tech Stack: </strong>
         {project.skills}
       </p>
-      // {project.github ? (
-      //   <p>
-      //     <strong>Repository: </strong>
-      //     <a href={project.github} target="_blank" rel="noopener noreferrer">
-      //       View on GitHub
-      //     </a>
-      //   </p>
-      // ) : null}
+      {project.github ? (
+        <p>
+          <strong>Repository: </strong>
+          <a href={project.github} target="_blank" rel="noopener noreferrer">
+            View on GitHub
+          </a>
+        </p>
+      ) : null}
 
       {/* Image Gallery Section */}
       <section className="image-gallery">
