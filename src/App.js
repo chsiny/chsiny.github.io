@@ -30,6 +30,9 @@ function App() {
           <li>
             <Link to="/about">About</Link>
           </li>
+          <li>
+            <Link to="/about">test</Link>
+          </li>
         </ul>
       </nav>
       <div className="main-content">
